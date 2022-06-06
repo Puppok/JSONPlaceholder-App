@@ -1,0 +1,35 @@
+.page-wrapper {
+  height: var(--wrapper-height);
+  width: var(--wrapper-width);
+  padding: 0 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #AAAAAA;
+  background-color: rgba(135, 135, 135, .3);
+
+  &__title {
+    font-size: 1.5rem;
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &__navigation {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--header-text-color);
+    transition: .3s all ease;
+  }
+
+  &__link:hover {
+    color: #000BC0;
+  }
+}
