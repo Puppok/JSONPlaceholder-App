@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {ResourcesComponent} from "./resources.component";
 import {RouterModule, Routes} from "@angular/router";
+import { PostsListComponent } from './posts/posts-list/posts-list.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    ResourcesComponent
+    ResourcesComponent,
+    PostsListComponent,
   ],
 })
 export class ResourcesModule {
