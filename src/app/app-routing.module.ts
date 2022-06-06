@@ -13,6 +13,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'resources',
+    loadChildren: () => import('./resources/resources.module').then(module => module.ResourcesModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(module => module.AboutModule)
   }
