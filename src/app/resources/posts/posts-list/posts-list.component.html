@@ -1,1 +1,19 @@
-<p>posts-list works!</p>
+<section class="page-wrapper">
+  <section class="sorting">
+    <div class="sorting__sort">
+      sort by:
+    </div>
+    <div class="sorting__filter">
+      filter by:
+    </div>
+    <div class="sorting__search">
+      search:
+    </div>
+  </section>
+  <main class="posts-list">
+    <posts-list-info class="posts-list__post"
+                     *ngFor="let post of postsListService.posts$ | async"
+                     [post]="post"></posts-list-info>
+  </main>
+</section>
+
