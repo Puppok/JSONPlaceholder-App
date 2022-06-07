@@ -6,7 +6,13 @@ import {RouterModule, Routes} from "@angular/router";
 const routes: Routes = [
   {
     path: '',
-    component: ResourcesComponent
+    component: ResourcesComponent,
+    children: [
+      {
+        path: 'posts',
+        loadChildren: () => import('./posts/posts-list/posts-list.module').then(module => module.PostsListModule),
+      }
+    ]
   }
 ]
 
@@ -16,7 +22,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    ResourcesComponent
+    ResourcesComponent,
   ],
 })
 export class ResourcesModule {
