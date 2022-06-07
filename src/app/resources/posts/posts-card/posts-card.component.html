@@ -1,1 +1,4 @@
+<section *ngIf="postsCardService.post$ | async as post">
+  {{post.id}}
+</section>
 <p>posts-card works!</p>

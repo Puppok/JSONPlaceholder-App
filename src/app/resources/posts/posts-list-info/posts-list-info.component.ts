@@ -9,10 +9,12 @@ import {Post} from "../../../shared/models/post.interface";
 export class PostsListInfoComponent implements OnInit {
 
   @Input() post!: Post
+  postId = ''
 
   constructor() { }
 
   ngOnInit(): void {
+    this.postId = this.post.id.toString()
   }
 
 }

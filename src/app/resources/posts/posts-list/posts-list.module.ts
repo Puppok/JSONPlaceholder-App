@@ -8,6 +8,10 @@ const routes: Routes = [
   {
     path: '',
     component: PostsListComponent,
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('../posts-card/posts-card.module').then(module => module.PostsCardModule)
   }
 ]
 
