@@ -1,4 +1,15 @@
-<section *ngIf="postsCardService.post$ | async as post">
-  {{post.id}}
+<section class="page-wrapper"
+         *ngIf="postsCardService.post$ | async as post">
+  <main class="post">
+    <h2 class="post__title">
+      <span class="post__id">{{post.id}}.</span>
+      {{post.title.charAt(0).toUpperCase() + post.title.slice(1)}}
+    </h2>
+    <p class="post__body">{{post.body.charAt(0).toUpperCase() + post.body.slice(1)}}</p>
+    <button class="post__back-btn" (click)="backToList()">
+      <span class="material-symbols-rounded">chevron_left</span>
+      Back to list
+    </button>
+  </main>
+  <footer class="userId">User id: {{post.userId}}</footer>
 </section>
-<p>posts-card works!</p>

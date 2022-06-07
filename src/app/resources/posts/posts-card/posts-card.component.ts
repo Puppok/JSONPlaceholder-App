@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PostsCardService} from "./posts-card.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-posts-card',
@@ -9,9 +10,13 @@ import {PostsCardService} from "./posts-card.service";
 })
 export class PostsCardComponent implements OnInit {
 
-  constructor(readonly postsCardService: PostsCardService) { }
+  constructor(readonly postsCardService: PostsCardService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  backToList() {
+    this.router.navigateByUrl('resources/posts')
+  }
 }
