@@ -7,10 +7,15 @@ import {Post} from "./models/post.interface";
 })
 export class ApiService {
 
+  private postUrl = 'https://jsonplaceholder.typicode.com/posts/'
+
   constructor(private http: HttpClient) { }
 
   getPosts() {
-    const url = 'https://jsonplaceholder.typicode.com/posts'
-    return this.http.get<Post[]>(url)
+    return this.http.get<Post[]>(this.postUrl)
+  }
+
+  getPost(id: string) {
+    return this.http.get<Post>(this.postUrl + id)
   }
 }
