@@ -11,7 +11,9 @@
     </div>
   </section>
   <main class="posts-list">
-    <div class="posts-list__post">some text</div>
+    <posts-list-info class="posts-list__post"
+                     *ngFor="let post of postsListService.posts$ | async"
+                     [post]="post"></posts-list-info>
   </main>
 </section>
 

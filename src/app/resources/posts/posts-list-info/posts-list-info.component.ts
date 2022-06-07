@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Post} from "../../../shared/models/post.interface";
 
 @Component({
   selector: 'posts-list-info',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-list-info.component.scss']
 })
 export class PostsListInfoComponent implements OnInit {
+
+  @Input() post!: Post
 
   constructor() { }
 
