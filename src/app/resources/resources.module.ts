@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {ResourcesComponent} from "./resources.component";
 import {RouterModule, Routes} from "@angular/router";
+import { CommentsListComponent } from './comments/comments-list/comments-list.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
   ],
   declarations: [
     ResourcesComponent,
+    CommentsListComponent
   ],
 })
 export class ResourcesModule {
