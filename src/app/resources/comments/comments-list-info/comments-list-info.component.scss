@@ -1,0 +1,29 @@
+.page-wrapper {
+  height: var(--wrapper-height);
+  width: var(--wrapper-width);
+  display: flex;
+  align-items: center;
+  background-color: rgba(237, 240, 207, .3);
+  transition: all .3s ease;
+  cursor: pointer;
+  position: relative;
+
+  .comment {
+    z-index: 1;
+    padding-left: 1%;
+
+    &__id {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.page-wrapper:hover {
+  background-color: rgba(237, 240, 207);
+}
