@@ -11,6 +11,8 @@
     </div>
   </section>
   <main class="comments-list">
-    <div class="comments-list__comment"></div>
+    <comments-list-info class="comments-list__comment"
+                        *ngFor="let comment of commentsListService.comments$ | async"
+                        [comment]="comment"></comments-list-info>
   </main>
 </section>

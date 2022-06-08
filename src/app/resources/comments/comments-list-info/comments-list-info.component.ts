@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Comment} from "../../../shared/models/comment.interface";
 
 @Component({
-  selector: 'app-comments-list-info',
+  selector: 'comments-list-info',
   templateUrl: './comments-list-info.component.html',
   styleUrls: ['./comments-list-info.component.scss']
 })
 export class CommentsListInfoComponent implements OnInit {
+
+  @Input() comment!: Comment
 
   constructor() { }
 

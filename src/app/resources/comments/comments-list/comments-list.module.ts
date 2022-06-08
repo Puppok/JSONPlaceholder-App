@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {CommentsListComponent} from "./comments-list.component";
 import {RouterModule, Routes} from "@angular/router";
+import {CommentsListInfoComponent} from "../comments-list-info/comments-list-info.component";
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    CommentsListComponent
+    CommentsListComponent,
+    CommentsListInfoComponent
   ]
 })
 export class CommentsListModule {
