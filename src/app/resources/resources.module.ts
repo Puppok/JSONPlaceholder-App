@@ -11,6 +11,10 @@ const routes: Routes = [
       {
         path: 'posts',
         loadChildren: () => import('./posts/posts-list/posts-list.module').then(module => module.PostsListModule),
+      },
+      {
+        path: 'comments',
+        loadChildren: () => import('./comments/comments-list/comments-list.module').then(module => module.CommentsListModule)
       }
     ]
   }
@@ -22,7 +26,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-    ResourcesComponent,
+    ResourcesComponent
   ],
 })
 export class ResourcesModule {

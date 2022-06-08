@@ -1,0 +1,18 @@
+<section class="page-wrapper">
+  <section class="sorting">
+    <div class="sorting__sort">
+      sort by:
+    </div>
+    <div class="sorting__filter">
+      filter by:
+    </div>
+    <div class="sorting__search">
+      search:
+    </div>
+  </section>
+  <main class="comments-list">
+    <comments-list-info class="comments-list__comment"
+                        *ngFor="let comment of commentsListService.comments$ | async"
+                        [comment]="comment"></comments-list-info>
+  </main>
+</section>
